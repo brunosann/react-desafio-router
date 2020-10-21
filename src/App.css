@@ -3,3 +3,118 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  animation: start 0.5s forwards;
+}
+.nav-site {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.btn-nav {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.btn-nav:hover {
+  background-color: #dbdbdb;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+.btn-nav.active {
+  background-color: #dbdbdb;
+}
+.btn-nav + .btn-nav {
+  margin-left: 20px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 50px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contato {
+  display: flex;
+}
+.contato .image {
+  flex: 1;
+}
+.contato .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.contato .info {
+  flex: 1;
+  margin: 20px 40px;
+}
+.contato .info ul {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+.contato .info ul li {
+  margin: 10px 0;
+}
+
+.produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.produto .image img {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.produto .price {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #40f564;
+}
+.produto .description {
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.copy {
+  text-align: center;
+  padding: 10px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes start {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.loading {
+  animation: load 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+}
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}

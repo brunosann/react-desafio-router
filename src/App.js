@@ -1,10 +1,27 @@
 import React from 'react';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css'
+import Contato from './contato/Contato';
+import NotFound from './NotFound';
+import Produto from './produto/Produto';
+import Produtos from './produto/Produtos';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Hello World Ola</h1>
+      
+      <BrowserRouter>
+      <nav className="container nav-site">
+        <NavLink className="btn-nav" to="/" end>Produtos</NavLink>
+        <NavLink className="btn-nav" to="contato">Contato</NavLink>
+      </nav>
+        <Routes>
+          <Route path="/" element={<Produtos />} />
+          <Route path="produto/:id" element={<Produto />} />
+          <Route path="contato" element={<Contato />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </React.Fragment>
   );
 }
