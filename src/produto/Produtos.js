@@ -12,7 +12,7 @@ const Produtos = () => {
     })()
   }, [])
 
-  if (!produtos) return <p className="container">Caregando</p>
+  if (!produtos) return <p className="container loading"></p>
 
   return (
     <main className="container">

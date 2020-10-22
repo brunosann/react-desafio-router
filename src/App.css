@@ -118,3 +118,32 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 800px) {
+  .produtos {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 30px;
+  }
+  .nav-site {
+    margin: 50px 30px;
+  }
+  .contato {
+    flex-direction: column;
+    margin: 0 30px;
+  }
+  .produto {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+  .produto {
+    grid-template-columns: 1fr;
+  }
+  .produto .info {
+    grid-row: 1;
+  }
+}
