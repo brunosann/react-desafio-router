@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Produtos />} />
           <Route path="produto/:id" element={<Produto />} />
           <Route path="contato" element={<Contato />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Produtos />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Head from '../Head'
 
 const Produto = () => {
   const params = useParams()
@@ -18,6 +19,7 @@ const Produto = () => {
 
   return (
     <main className="container">
+      <Head title="| Produto" />
       <div className="produto">
         <div className="image">
           {produto.fotos.map(foto => <img key={foto.titulo} src={foto.src} alt={`imagem do ${foto.titulo}`}/> )}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Head from '../Head'
 
 const Produtos = () => {
   const [produtos, setProdutos] = React.useState(null)
@@ -16,6 +17,7 @@ const Produtos = () => {
 
   return (
     <main className="container">
+      <Head />
       <div className="produtos">
         {produtos.map(produto => (
           <article key={produto.id} className="card">

@@ -1,9 +1,11 @@
 import React from 'react'
+import Head from '../Head';
 import foto from '../img/unsplash.jpg';
 
 const Contato = () => {
   return (
     <main className="container">
+      <Head title="| Contato" />
       <div className="contato">
         <div className="image">
           <img src={foto} alt="imagem contato"/>
