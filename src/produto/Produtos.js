@@ -7,22 +7,24 @@ const Produtos = () => {
 
   React.useEffect(() => {
     (async function getProdutos() {
-      const data = await fetch("https://ranekapi.origamid.dev/json/api/produto")
+      const data = await fetch("https://apiranek.devteixeira.com")
       const json = await data.json()
-      setProdutos(json)
+      setProdutos(json.data)
     })()
   }, [])
 
   if (!produtos) return <p className="container loading"></p>
+
+  const urlPhoto = 'https://apiranek.devteixeira.com/uploads/'
 
   return (
     <main className="container">
       <Head />
       <div className="produtos">
         {produtos.map(produto => (
-          <article key={produto.id} className="card">
-            <Link to={`produto/${produto.id}`}>
-              <img src={produto.fotos[0].src} alt={`imagem do ${produto.fotos[0].titulo}`}/>
+          <article key={produto.id_produto} className="card">
+            <Link to={`produto/${produto.id_produto}`}>
+              <img src={urlPhoto+produto.fotos[0].src} alt={`imagem do ${produto.fotos[0].titulo}`}/>
             </Link>
             <h2>{produto.nome}</h2>
           </article>

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Contato from './contato/Contato';
-import NotFound from './NotFound';
 import Produto from './produto/Produto';
 import Produtos from './produto/Produtos';
 
